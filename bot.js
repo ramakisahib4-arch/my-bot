@@ -5,7 +5,5 @@ const token = process.env.BOT_TOKEN;
 const bot = new TelegramBot(token, { polling: true });
 
 bot.on("message", (msg) => {
-  const chatId = msg.chat.id;
-
-  bot.sendMessage(chatId, "ربات شما فعال است 24/7 ✅");
+  bot.sendMessage(msg.chat.id, "ربات شما فعال است ✅");
 });
